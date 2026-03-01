@@ -45,10 +45,13 @@ const serviceSchemas = serviceCategories.map(cat => ({
   <section class="relative overflow-hidden bg-dark-900">
     <!-- Background image -->
     <img
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop&q=80"
-      alt=""
+      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop&q=80&fm=webp"
+      alt="Vitrier professionnel Paris Île-de-France"
       class="absolute inset-0 w-full h-full object-cover"
+      width="1920"
+      height="1080"
       loading="eager"
+      fetchpriority="high"
     />
     <!-- Dark overlay for readability -->
     <div class="absolute inset-0 bg-gradient-to-r from-dark-950/95 via-dark-950/85 to-dark-950/70"></div>
@@ -168,9 +171,11 @@ const serviceSchemas = serviceCategories.map(cat => ({
             <!-- Image area -->
             <div class="relative h-44 overflow-hidden">
               <img
-                src={cat.image}
+                src={`${cat.image}${cat.image.includes('?') ? '&' : '?'}fm=webp`}
                 alt={cat.name}
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width="400"
+                height="176"
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-dark-700 via-dark-900/50 to-dark-900/20"></div>
