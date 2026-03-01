@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark theme palette inspired by the logo's navy blue */
+  --color-dark-950: #060a10;
+  --color-dark-900: #0c1220;
+  --color-dark-800: #131d2e;
+  --color-dark-700: #1a2840;
+  --color-dark-600: #243550;
+  --color-dark-500: #2e4263;
+
+  /* Primary - logo's teal-navy */
+  --color-primary-50: #eef6fb;
+  --color-primary-100: #d4e8f4;
+  --color-primary-200: #a8d1e9;
+  --color-primary-300: #6db3d9;
+  --color-primary-400: #4a96c4;
+  --color-primary-500: #3b7ea1;
+  --color-primary-600: #2a5f7e;
+  --color-primary-700: #1e4a65;
+  --color-primary-800: #17394e;
+  --color-primary-900: #0f2838;
+  --color-primary-950: #091a26;
+
+  /* Accent - warm gold for contrast */
+  --color-accent-300: #f0d080;
+  --color-accent-400: #d4a853;
+  --color-accent-500: #c49540;
+  --color-accent-600: #a87a30;
+
+  --color-success-500: #22c55e;
+  --color-warning-500: #f59e0b;
+  --color-danger-500: #ef4444;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans bg-dark-900 text-gray-200 antialiased;
+  }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 126, 161, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(59, 126, 161, 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.delay-100 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-200 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-300 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-400 { transition-delay: 0.4s; }
+.animate-on-scroll.delay-500 { transition-delay: 0.5s; }
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent-400), var(--color-accent-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-dark {
+  background: rgba(12, 18, 32, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.card-dark {
+  background: var(--color-dark-800);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-dark:hover {
+  border-color: rgba(59, 126, 161, 0.3);
+  background: var(--color-dark-700);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-xl
+    hover:bg-primary-400 active:bg-primary-600 transition-all duration-200
+    shadow-lg shadow-primary-500/20 hover:shadow-xl hover:shadow-primary-500/30;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-primary-300 font-semibold rounded-xl
+    border border-primary-700 hover:border-primary-500 hover:bg-primary-900/50 transition-all duration-200;
+}
+
+.btn-accent {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 text-dark-950 font-semibold rounded-xl
+    hover:bg-accent-400 active:bg-accent-600 transition-all duration-200
+    shadow-lg shadow-accent-500/20 hover:shadow-xl hover:shadow-accent-500/30;
+}
+
+.btn-whatsapp {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-xl
+    hover:bg-green-500 active:bg-green-700 transition-all duration-200
+    shadow-lg shadow-green-600/20 hover:shadow-xl hover:shadow-green-600/30;
+}
+
+.section-padding {
+  @apply px-4 py-16 md:px-6 md:py-24 lg:px-8;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Service image placeholders */
+.service-img {
+  background: linear-gradient(135deg, var(--color-dark-700) 0%, var(--color-dark-600) 50%, var(--color-primary-900) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.service-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(59, 126, 161, 0.05), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}

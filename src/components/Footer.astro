@@ -1,0 +1,62 @@
+---
+import { contactInfo } from '../data/contact';
+import { serviceCategories } from '../data/services';
+---
+
+<footer class="bg-dark-950 text-gray-400 border-t border-white/5">
+  <div class="container-custom section-padding !py-12 md:!py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/images/logo.svg" alt={contactInfo.companyName} class="h-10 w-auto" />
+        </div>
+        <p class="text-sm leading-relaxed mb-4 text-gray-500">
+          {contactInfo.tagline} Intervention rapide 24h/24 pour tous vos besoins en vitrerie et miroiterie en Île-de-France.
+        </p>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500/10 text-green-400 rounded-full text-xs font-medium">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          Disponible maintenant
+        </span>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4">Nos services</h3>
+        <ul class="space-y-2.5">
+          {serviceCategories.map((cat) => (
+            <li><a href={`/services/${cat.slug}`} class="text-sm hover:text-accent-400 transition-colors">{cat.name}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-2.5">
+          <li><a href="/" class="text-sm hover:text-accent-400 transition-colors">Accueil</a></li>
+          <li><a href="/services" class="text-sm hover:text-accent-400 transition-colors">Catalogue de services</a></li>
+          <li><a href="/entreprises" class="text-sm hover:text-accent-400 transition-colors">Entreprises & professionnels</a></li>
+          <li><a href="/qui-sommes-nous" class="text-sm hover:text-accent-400 transition-colors">Qui sommes-nous</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-4">Contact</h3>
+        <ul class="space-y-3">
+          <li><a href={contactInfo.phoneHref} class="flex items-center gap-2.5 text-sm hover:text-accent-400 transition-colors"><svg class="w-4 h-4 shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>{contactInfo.phone}</a></li>
+          <li><a href={contactInfo.emailHref} class="flex items-center gap-2.5 text-sm hover:text-accent-400 transition-colors"><svg class="w-4 h-4 shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>{contactInfo.email}</a></li>
+          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 shrink-0 text-primary-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>{contactInfo.address}</li>
+          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 shrink-0 text-primary-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><div><div>{contactInfo.hours}</div><div class="text-gray-600">{contactInfo.hoursOffice}</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/5">
+    <div class="container-custom px-4 md:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
+      <p>&copy; {new Date().getFullYear()} {contactInfo.companyName}. Tous droits réservés.</p>
+      <div class="flex items-center gap-4">
+        <a href="/mentions-legales" class="hover:text-gray-400 transition-colors">Mentions légales</a>
+        <a href="/politique-confidentialite" class="hover:text-gray-400 transition-colors">Confidentialité</a>
+        <span>Site créé par <strong class="text-gray-400">Nouh BENZIDANE</strong></span>
+      </div>
+    </div>
+  </div>
+</footer>

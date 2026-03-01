@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { contactInfo } from '../data/contact';
+
+const siteUrl = 'https://www.artisan-francilien-idf.fr';
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "Politique de confidentialité", "item": `${siteUrl}/politique-confidentialite` }
+  ]
+};
+---
+
+<Layout
+  title="Politique de confidentialité | Artisan Francilien IDF"
+  description="Politique de confidentialité du site Artisan Francilien IDF. Protection de vos données personnelles conformément au RGPD."
+  canonical="/politique-confidentialite"
+  jsonLd={breadcrumbSchema}
+>
+  <section class="section-padding bg-dark-900">
+    <div class="container-custom max-w-4xl">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-8">Politique de confidentialité</h1>
+
+      <div class="space-y-8 text-gray-400 leading-relaxed">
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Responsable du traitement</h2>
+          <p>Le responsable du traitement des données personnelles collectées sur ce site est :</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li><strong class="text-white">{contactInfo.companyName}</strong></li>
+            <li>Adresse : {contactInfo.address}</li>
+            <li>Email : <a href={contactInfo.emailHref} class="text-primary-400 hover:underline">{contactInfo.email}</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Données collectées</h2>
+          <p>Lorsque vous utilisez notre formulaire de contact, nous collectons les données suivantes :</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Nom et prénom</li>
+            <li>Adresse email</li>
+            <li>Numéro de téléphone (facultatif)</li>
+            <li>Message et motif de la demande</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Finalité du traitement</h2>
+          <p>Les données collectées sont utilisées exclusivement pour :</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Répondre à vos demandes de devis et d'informations</li>
+            <li>Vous recontacter pour le suivi de votre projet</li>
+            <li>Améliorer la qualité de nos services</li>
+          </ul>
+          <p class="mt-2">Vos données ne sont jamais vendues ni transmises à des tiers à des fins commerciales.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Durée de conservation</h2>
+          <p>Les données personnelles sont conservées pendant une durée maximale de 3 ans à compter de votre dernière interaction avec {contactInfo.companyName}.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Vos droits (RGPD)</h2>
+          <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li><strong class="text-white">Droit d'accès</strong> : obtenir la confirmation que vos données sont traitées et en obtenir une copie</li>
+            <li><strong class="text-white">Droit de rectification</strong> : demander la correction de données inexactes</li>
+            <li><strong class="text-white">Droit à l'effacement</strong> : demander la suppression de vos données</li>
+            <li><strong class="text-white">Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+            <li><strong class="text-white">Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+          </ul>
+          <p class="mt-2">Pour exercer ces droits, contactez-nous à : <a href={contactInfo.emailHref} class="text-primary-400 hover:underline">{contactInfo.email}</a></p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Cookies</h2>
+          <p>Ce site utilise uniquement des cookies techniques nécessaires à son fonctionnement. Aucun cookie de suivi publicitaire ou analytique tiers n'est déposé sans votre consentement.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Sécurité</h2>
+          <p>{contactInfo.companyName} met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la destruction, la perte, l'altération ou la divulgation non autorisée.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-white mb-3">Contact et réclamations</h2>
+          <p>Pour toute question relative à la protection de vos données, contactez-nous à <a href={contactInfo.emailHref} class="text-primary-400 hover:underline">{contactInfo.email}</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) : <span class="text-white">www.cnil.fr</span>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

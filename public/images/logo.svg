@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 50" fill="none">
+  <!-- Hexagonal icon -->
+  <g transform="translate(5, 3)">
+    <path d="M22 2L38 11.5V30.5L22 40L6 30.5V11.5L22 2Z" fill="#3b7ea1" opacity="0.15" stroke="#3b7ea1" stroke-width="1.5"/>
+    <path d="M22 8L32 14V26L22 32L12 26V14L22 8Z" fill="#3b7ea1" opacity="0.3" stroke="#3b7ea1" stroke-width="1"/>
+    <!-- Glass/diamond shape inside -->
+    <path d="M16 17L22 12L28 17L22 30L16 17Z" fill="#d4a853" opacity="0.9"/>
+    <path d="M18 18L22 14L26 18L22 26L18 18Z" fill="#e8c475"/>
+  </g>
+  <!-- Company name -->
+  <text x="52" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="white" letter-spacing="-0.02em">Artisan Francilien</text>
+  <text x="242" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#d4a853" letter-spacing="-0.02em">IDF</text>
+  <text x="52" y="38" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="9.5" fill="#6b7f99" letter-spacing="0.08em">VITRERIE • MIROITERIE • DÉPANNAGE</text>
+</svg>
