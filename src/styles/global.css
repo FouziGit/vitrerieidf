@@ -1,13 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Dark theme palette inspired by the logo's navy blue */
+  /* Dark palette — kept for footer & hero overlays */
   --color-dark-950: #060a10;
   --color-dark-900: #0c1220;
   --color-dark-800: #131d2e;
   --color-dark-700: #1a2840;
   --color-dark-600: #243550;
   --color-dark-500: #2e4263;
+
+  /* Light palette — warm & reassuring */
+  --color-light-bg: #FAFBFD;
+  --color-light-section: #F0F4F8;
+  --color-light-card: #FFFFFF;
+  --color-light-input: #F7F9FC;
+  --color-light-border: #DFE6EE;
+  --color-light-heading: #1A2B4A;
+  --color-light-body: #4A5568;
+  --color-light-muted: #8896A6;
 
   /* Primary - logo's teal-navy */
   --color-primary-50: #eef6fb;
@@ -40,7 +50,9 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply font-sans bg-dark-900 text-gray-200 antialiased;
+    @apply font-sans antialiased;
+    background-color: var(--color-light-bg);
+    color: var(--color-light-body);
   }
 }
 
@@ -102,7 +114,7 @@
 }
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(42, 95, 126, 0.12);
 }
 
 .gradient-text {
@@ -112,20 +124,23 @@
   background-clip: text;
 }
 
+/* Glass header — light version */
 .glass-dark {
-  background: rgba(12, 18, 32, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
+/* Cards — light, warm, reassuring */
 .card-dark {
-  background: var(--color-dark-800);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--color-light-card);
+  border: 1px solid var(--color-light-border);
+  box-shadow: 0 1px 3px rgba(42, 95, 126, 0.06);
 }
 
 .card-dark:hover {
-  border-color: rgba(59, 126, 161, 0.3);
-  background: var(--color-dark-700);
+  border-color: var(--color-primary-300);
+  box-shadow: 0 4px 12px rgba(42, 95, 126, 0.1);
 }
 
 .btn-primary {
@@ -135,14 +150,15 @@
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-primary-300 font-semibold rounded-xl
-    border border-primary-700 hover:border-primary-500 hover:bg-primary-900/50 transition-all duration-200;
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-primary-600 font-semibold rounded-xl
+    border border-primary-200 hover:border-primary-400 hover:bg-primary-50 transition-all duration-200;
 }
 
 .btn-accent {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 text-dark-950 font-semibold rounded-xl
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 font-semibold rounded-xl
     hover:bg-accent-400 active:bg-accent-600 transition-all duration-200
     shadow-lg shadow-accent-500/20 hover:shadow-xl hover:shadow-accent-500/30;
+  color: var(--color-light-heading);
 }
 
 .btn-whatsapp {
@@ -161,7 +177,7 @@
 
 /* Service image placeholders */
 .service-img {
-  background: linear-gradient(135deg, var(--color-dark-700) 0%, var(--color-dark-600) 50%, var(--color-primary-900) 100%);
+  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-primary-50) 50%, var(--color-light-section) 100%);
   position: relative;
   overflow: hidden;
 }
