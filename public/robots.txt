@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.artisan-francilien-idf.fr/sitemap.xml
+Sitemap: https://vitriersparis.fr/sitemap.xml

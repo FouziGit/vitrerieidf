@@ -16,7 +16,7 @@ if (!category) {
   return Astro.redirect('/services');
 }
 
-const siteUrl = 'https://www.artisan-francilien-idf.fr';
+const siteUrl = 'https://vitriersparis.fr';
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -52,7 +52,7 @@ const serviceSchemas = category.services.map(service => ({
 ---
 
 <Layout
-  title={`${category.name} | ${contactInfo.companyName} - Paris & IDF`}
+  title={`${category.name} | Vitriers Paris - ${contactInfo.companyName}`}
   description={`${category.description} Intervention sur Paris et toute l'Île-de-France. Devis gratuit, tarifs à partir de ${category.services[0]?.price || '60 €'}.`}
   canonical={`/services/${category.slug}`}
   jsonLd={[breadcrumbSchema, ...serviceSchemas]}

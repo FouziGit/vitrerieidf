@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { title, description, canonical, jsonLd } = Astro.props;
-const siteUrl = 'https://www.artisan-francilien-idf.fr';
+const siteUrl = 'https://vitriersparis.fr';
 const fullCanonical = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
 const ogImage = `${siteUrl}/images/og-default.jpg`;
 ---

@@ -5,7 +5,7 @@ import FAQ from '../components/FAQ.astro';
 import { contactInfo } from '../data/contact';
 import { serviceCategories } from '../data/services';
 
-const siteUrl = 'https://www.artisan-francilien-idf.fr';
+const siteUrl = 'https://vitriersparis.fr';
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const serviceSchemas = serviceCategories.map(cat => ({
 ---
 
 <Layout
-  title="Vitrier Paris & Île-de-France | Dépannage 24h/24 - Artisan Francilien IDF"
+  title="Vitriers Paris & Île-de-France | Dépannage 24h/24 - Artisan Francilien IDF"
   description="Artisan vitrier à Paris et en Île-de-France. Double vitrage, miroiterie sur mesure, dépannage urgence 24h/24, 7j/7. Devis gratuit, intervention en moins d'1h. Plus de 5 000 interventions réalisées."
   canonical="/"
   jsonLd={[breadcrumbSchema, ...serviceSchemas]}

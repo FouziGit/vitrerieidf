@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { contactInfo } from '../data/contact';
 
-const siteUrl = 'https://www.artisan-francilien-idf.fr';
+const siteUrl = 'https://vitriersparis.fr';
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -14,7 +14,7 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="Mentions légales | Vitrier Paris IDF - Artisan Francilien IDF"
+  title="Mentions légales | Vitriers Paris - Artisan Francilien IDF"
   description="Mentions légales du site Artisan Francilien IDF, vitrier professionnel à Paris et Île-de-France. Éditeur, hébergeur, conditions d'utilisation."
   canonical="/mentions-legales"
   jsonLd={breadcrumbSchema}
@@ -26,7 +26,7 @@ const breadcrumbSchema = {
       <div class="space-y-8 text-slate-600 leading-relaxed">
         <div>
           <h2 class="text-xl font-bold text-[#1A2B4A] mb-3">Éditeur du site</h2>
-          <p>Le site <strong class="text-[#1A2B4A]">www.artisan-francilien-idf.fr</strong> est édité par :</p>
+          <p>Le site <strong class="text-[#1A2B4A]">vitriersparis.fr</strong> est édité par :</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
             <li>Raison sociale : <strong class="text-[#1A2B4A]">{contactInfo.companyName}</strong></li>
             <li>Forme juridique : SASU (Société par actions simplifiée unipersonnelle)</li>
