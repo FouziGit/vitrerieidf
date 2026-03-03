@@ -29,12 +29,17 @@ const breadcrumbSchema = {
           <p>Le site <strong class="text-[#1A2B4A]">www.artisan-francilien-idf.fr</strong> est édité par :</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
             <li>Raison sociale : <strong class="text-[#1A2B4A]">{contactInfo.companyName}</strong></li>
-            <li>Forme juridique : SARL</li>
+            <li>Forme juridique : SASU (Société par actions simplifiée unipersonnelle)</li>
             <li>Siège social : {contactInfo.address}</li>
+            <li>SIREN : 907 922 256</li>
             <li>SIRET : {contactInfo.siret}</li>
+            <li>Numéro de TVA intracommunautaire : FR87907922256</li>
+            <li>RCS : 907 922 256 R.C.S. Paris</li>
+            <li>Capital social : 1 000,00 €</li>
+            <li>Date de création : 25/11/2021</li>
             <li>Téléphone : <a href={contactInfo.phoneHref} class="text-primary-500 hover:underline">{contactInfo.phone}</a></li>
             <li>Email : <a href={contactInfo.emailHref} class="text-primary-500 hover:underline">{contactInfo.email}</a></li>
-            <li>Directeur de la publication : Artisan Francilien IDF</li>
+            <li>Directeur de la publication : Badawi Salman</li>
           </ul>
         </div>
 
@@ -47,9 +52,15 @@ const breadcrumbSchema = {
           <h2 class="text-xl font-bold text-[#1A2B4A] mb-3">Hébergement</h2>
           <p>Le site est hébergé par :</p>
           <ul class="list-disc list-inside mt-2 space-y-1">
-            <li>Raison sociale : Vercel Inc.</li>
-            <li>Adresse : 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis</li>
-            <li>Site web : vercel.com</li>
+            <li>Raison sociale : Netlify, Inc.</li>
+            <li>Adresse : 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis</li>
+            <li>Site web : netlify.com</li>
+          </ul>
+          <p class="mt-3">Nom de domaine enregistré auprès de :</p>
+          <ul class="list-disc list-inside mt-2 space-y-1">
+            <li>Raison sociale : OVH SAS</li>
+            <li>Adresse : 2 Rue Kellermann, 59100 Roubaix, France</li>
+            <li>Site web : ovh.com</li>
           </ul>
         </div>
 
