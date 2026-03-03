@@ -8,7 +8,7 @@
     <path d="M18 18L22 14L26 18L22 26L18 18Z" fill="#e8c475"/>
   </g>
   <!-- Company name -->
-  <text x="52" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#1A2B4A" letter-spacing="-0.02em">Artisan Francilien</text>
-  <text x="242" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#d4a853" letter-spacing="-0.02em">IDF</text>
+  <text x="52" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="20" fill="#1A2B4A" letter-spacing="-0.02em">Vitriers</text>
+  <text x="142" y="22" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="20" fill="#d4a853" letter-spacing="-0.02em">Paris</text>
   <text x="52" y="38" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="9.5" fill="#6b7f99" letter-spacing="0.08em">VITRERIE • MIROITERIE • DÉPANNAGE</text>
 </svg>
