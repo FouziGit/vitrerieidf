@@ -1,6 +1,6 @@
 export const contactInfo = {
-  phone: "01 84 80 00 00",
-  phoneHref: "tel:+33184800000",
+  phone: "07 65 82 26 26",
+  phoneHref: "tel:+33765822626",
   whatsapp: "https://wa.me/33765822626",
   email: "contact@artisan-francilien-idf.fr",
   emailHref: "mailto:contact@artisan-francilien-idf.fr",
