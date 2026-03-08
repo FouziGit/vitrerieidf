@@ -53,7 +53,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: "remplacement-simple-vitrage",
         description: "Remplacement rapide et économique de simple vitrage pour fenêtres, portes et impostes. Nos vitriers interviennent avec un stock de verre clair de 3mm à 10mm d'épaisseur, découpé sur place aux dimensions exactes de votre châssis. Idéal pour les immeubles anciens, copropriétés haussmanniennes et bâtiments classés nécessitant le maintien du simple vitrage d'origine. Pose traditionnelle au mastic ou en parclose selon le type de menuiserie. Intervention rapide sous 24h sur Paris et toute l'Île-de-France.",
         price: "À partir de 135 €",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80&fm=webp",
+        image: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=600&h=400&fit=crop&q=80&fm=webp",
         iconPath: "M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
       },
       {
@@ -191,7 +191,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: "depannage-porte-vitree",
         description: "Intervention rapide pour la réparation et le remplacement de portes vitrées, portes d'entrée vitrées et portes de hall d'immeuble. Nos vitriers traitent tous les problèmes : verre brisé, gond défaillant, ferme-porte cassé, joint usé, serrure grippée. Nous intervenons sur les portes en verre trempé Securit, les portes à double battant, les portes automatiques et les portes coupe-feu vitrées. Stock de pièces détachées sur nos véhicules pour une réparation immédiate dans la majorité des cas.",
         price: "À partir de 135 €",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80&fm=webp",
+        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop&q=80&fm=webp",
         iconPath: "M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
       },
       {
@@ -297,7 +297,7 @@ export const serviceCategories: ServiceCategory[] = [
         slug: "porte-fenetre-porte-entree-vitree",
         description: "Installation et remplacement de portes-fenêtres et portes d'entrée vitrées en PVC, aluminium ou mixte bois-alu. Nos portes-fenêtres assurent un accès facile à votre balcon ou terrasse avec une isolation performante. Pour les portes d'entrée, nous proposons des modèles vitrés avec double vitrage retardateur d'effraction, serrure multipoints et design personnalisable. Large choix de vitrages : clair, dépoli, décoratif avec petits bois ou vitrage ornemental. Conformes aux normes de sécurité et d'isolation en vigueur.",
         price: "À partir de 490 €",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80&fm=webp",
+        image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&h=400&fit=crop&q=80&fm=webp",
         iconPath: "M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
       },
       {

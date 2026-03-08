@@ -36,7 +36,7 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const { error } = await resend.emails.send({
-      from: 'Formulaire Contact <onboarding@resend.dev>',
+      from: 'Formulaire Contact <noreply@monartisanidf.fr>',
       to: 'contact@monartisanidf.fr',
       replyTo: email,
       subject: `[Site Web] ${subject} - ${name}`,

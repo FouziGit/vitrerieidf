@@ -70,8 +70,11 @@ const breadcrumbSchema = {
             <div class="relative h-52 overflow-hidden">
               <img
                 src={category.image}
-                alt={category.name}
+                srcset={`${category.image.replace('w=800', 'w=400').replace('h=500', 'h=312')} 400w, ${category.image} 800w`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                alt={`${category.name} - services vitrerie Paris IDF`}
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                width="800" height="500"
                 loading="lazy"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#1A2B4A]/70 via-[#1A2B4A]/30 to-transparent"></div>
