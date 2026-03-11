@@ -31,6 +31,14 @@ import { faqItems } from '../data/services';
   "mainEntity": faqItems.map(item => ({
     "@type": "Question",
     "name": item.question,
-    "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+      "author": {
+        "@type": "Organization",
+        "name": "Artisan Francilien IDF",
+        "url": "https://vitriersparis.fr"
+      }
+    }
   }))
 })} />

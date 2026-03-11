@@ -41,6 +41,12 @@ const serviceSchemas = category.services.map(service => ({
     "@type": "Offer",
     "priceCurrency": "EUR",
     "price": service.price.replace(/[^\d]/g, ''),
+    "availability": "https://schema.org/InStock",
+    "seller": { "@id": `${siteUrl}/#organization` },
+    "areaServed": [
+      { "@type": "City", "name": "Paris" },
+      { "@type": "State", "name": "Île-de-France" }
+    ],
     "priceSpecification": {
       "@type": "PriceSpecification",
       "priceCurrency": "EUR",
@@ -53,7 +59,7 @@ const serviceSchemas = category.services.map(service => ({
 
 <Layout
   title={`${category.name} | Vitriers Paris - ${contactInfo.companyName}`}
-  description={`${category.description} Intervention sur Paris et toute l'Île-de-France. Devis gratuit, tarifs dès ${(category.services[0]?.price || 'À partir de 60 €').replace(/^À partir de\s*/i, '')}.`}
+  description={category.metaDescription}
   canonical={`/services/${category.slug}`}
   jsonLd={[breadcrumbSchema, ...serviceSchemas]}
 >

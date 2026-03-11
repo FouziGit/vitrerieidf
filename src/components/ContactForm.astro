@@ -121,13 +121,18 @@ import { contactInfo } from '../data/contact';
       message: (document.getElementById('c-message') as HTMLTextAreaElement).value.trim(),
     };
 
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
 
+      clearTimeout(timeoutId);
       const result = await response.json();
 
       if (response.ok) {
@@ -137,9 +142,12 @@ import { contactInfo } from '../data/contact';
         errorMsg.classList.remove('hidden');
         errorText.textContent = result.error || 'Veuillez réessayer ou nous contacter directement par téléphone.';
       }
-    } catch {
+    } catch (err) {
+      clearTimeout(timeoutId);
       errorMsg.classList.remove('hidden');
-      errorText.textContent = 'Erreur de connexion. Vérifiez votre connexion internet et réessayez.';
+      errorText.textContent = err instanceof DOMException && err.name === 'AbortError'
+        ? 'Délai dépassé. Veuillez réessayer ou nous appeler directement.'
+        : 'Erreur de connexion. Vérifiez votre connexion internet et réessayez.';
     } finally {
       // Reset button
       submitBtn.disabled = false;
