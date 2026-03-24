@@ -9,9 +9,10 @@ interface Props {
   description: string;
   canonical?: string;
   jsonLd?: object | object[];
+  noindex?: boolean;
 }
 
-const { title, description, canonical, jsonLd } = Astro.props;
+const { title, description, canonical, jsonLd, noindex = false } = Astro.props;
 const siteUrl = 'https://vitriersparis.fr';
 const fullCanonical = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
 const ogImage = `${siteUrl}/images/og-default.jpg`;
@@ -32,10 +33,10 @@ const ogImage = `${siteUrl}/images/og-default.jpg`;
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-  <link rel="canonical" href={fullCanonical} />
-  <link rel="alternate" hreflang="fr-FR" href={fullCanonical} />
-  <link rel="alternate" hreflang="x-default" href={fullCanonical} />
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1"} />
+  {!noindex && <link rel="canonical" href={fullCanonical} />}
+  {!noindex && <link rel="alternate" hreflang="fr-FR" href={fullCanonical} />}
+  {!noindex && <link rel="alternate" hreflang="x-default" href={fullCanonical} />}
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />

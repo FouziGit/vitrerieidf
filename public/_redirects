@@ -9,3 +9,6 @@ http://vitriersparis.fr/* https://vitriersparis.fr/:splat 301!
 /qui-sommes-nous/  /qui-sommes-nous  301
 /mentions-legales/  /mentions-legales  301
 /politique-confidentialite/  /politique-confidentialite  301
+/zones-intervention/  /zones-intervention  301
+/services/*/  /services/:splat  301
+/zones-intervention/*/  /zones-intervention/:splat  301
