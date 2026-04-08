@@ -21,6 +21,31 @@
   status = 301
   force = true
 
+# Redirections savvitrerie.fr → vitriersparis.fr
+[[redirects]]
+  from = "https://savvitrerie.fr/*"
+  to = "https://vitriersparis.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.savvitrerie.fr/*"
+  to = "https://vitriersparis.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://savvitrerie.fr/*"
+  to = "https://vitriersparis.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.savvitrerie.fr/*"
+  to = "https://vitriersparis.fr/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
