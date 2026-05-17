@@ -1,7 +1,7 @@
 export const contactInfo = {
-  phone: "07 65 82 26 26",
-  phoneHref: "tel:+33765822626",
-  whatsapp: "https://wa.me/33765822626",
+  phone: "09 83 92 92 92",
+  phoneHref: "tel:+33983929292",
+  whatsapp: "https://wa.me/33765828585",
   email: "contact@monartisanidf.fr",
   emailHref: "mailto:contact@monartisanidf.fr",
   address: "75 Rue de Lourmel, 75015 Paris",
