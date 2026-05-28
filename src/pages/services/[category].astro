@@ -122,11 +122,9 @@ const serviceSchemas = category.services.map(service => ({
             <div class="relative h-48 overflow-hidden">
               <img
                 src={service.image}
-                srcset={`${service.image.replace('w=600', 'w=320').replace('h=400', 'h=213')} 320w, ${service.image} 600w`}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 alt={`${service.title} - vitrier Paris Île-de-France`}
                 class="absolute inset-0 w-full h-full object-cover"
-                width="600" height="400" loading="lazy"
+                width="800" height="500" loading="lazy" decoding="async"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#1A2B4A]/60 via-[#1A2B4A]/20 to-transparent"></div>
               <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-accent-400/30">

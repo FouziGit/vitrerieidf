@@ -45,8 +45,8 @@ const serviceSchemas = serviceCategories.map(cat => ({
   <section class="relative overflow-hidden">
     <!-- Background image -->
     <img
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=675&fit=crop&q=80&fm=webp"
-      srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=640&h=360&fit=crop&q=75&fm=webp 640w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1024&h=576&fit=crop&q=80&fm=webp 1024w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop&q=80&fm=webp 1920w"
+      src="/images/hero-1024.webp"
+      srcset="/images/hero-640.webp 640w, /images/hero-1024.webp 1024w, /images/hero-1920.webp 1920w"
       sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1920px"
       alt="Vitrier professionnel Paris Île-de-France - intervention rapide vitrerie"
       class="absolute inset-0 w-full h-full object-cover"
@@ -151,7 +151,7 @@ const serviceSchemas = serviceCategories.map(cat => ({
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-2xl font-bold text-[#1A2B4A] mb-4">Votre vitrier de confiance à Paris et en Île-de-France</h2>
         <p class="text-slate-600 leading-relaxed mb-4">
-          <strong class="text-[#1A2B4A]">Artisan Francilien IDF</strong> est une entreprise de vitrerie, miroiterie et dépannage vitrage basée à Paris (75015) et intervenant sur l'ensemble de l'Île-de-France. Fondée en 2009, l'entreprise emploie une équipe de vitriers qualifiés qui réalise plus de 500 interventions par an. Ses trois domaines d'expertise sont : l'installation et le remplacement de <a href="/services/vitrerie-double-vitrage" class="text-primary-500 hover:text-primary-600 underline">double et triple vitrage</a>, la <a href="/services/miroiterie-verre-decoratif" class="text-primary-500 hover:text-primary-600 underline">miroiterie sur mesure et le verre décoratif</a>, et le <a href="/services/depannage-urgence-vitrage" class="text-primary-500 hover:text-primary-600 underline">dépannage d'urgence 24h/24</a>. Artisan Francilien IDF est couvert par une assurance responsabilité civile professionnelle et une garantie décennale.
+          <strong class="text-[#1A2B4A]">Artisan Francilien IDF</strong> est une entreprise de vitrerie, miroiterie et dépannage vitrage basée à Paris (75015) et intervenant sur l'ensemble de l'Île-de-France. Fondée en 2009, l'entreprise emploie une équipe de vitriers qualifiés qui réalise plus de 500 interventions par an. Ses trois domaines d'expertise sont : l'installation et le remplacement de <a href="/services/vitrerie-double-vitrage" class="text-primary-700 hover:text-primary-800 underline font-medium">double et triple vitrage</a>, la <a href="/services/miroiterie-verre-decoratif" class="text-primary-700 hover:text-primary-800 underline font-medium">miroiterie sur mesure et le verre décoratif</a>, et le <a href="/services/depannage-urgence-vitrage" class="text-primary-700 hover:text-primary-800 underline font-medium">dépannage d'urgence 24h/24</a>. Artisan Francilien IDF est couvert par une assurance responsabilité civile professionnelle et une garantie décennale.
         </p>
         <p class="text-slate-600 leading-relaxed">
           Nous intervenons dans tous les arrondissements de Paris ainsi que dans les départements 77, 78, 91, 92, 93, 94 et 95. Que ce soit pour un remplacement de vitre cassée, la pose de double vitrage, une intervention en urgence ou un projet de miroiterie décorative, nos artisans vitriers se déplacent rapidement avec tout le matériel nécessaire pour une intervention soignée et durable.
@@ -178,14 +178,13 @@ const serviceSchemas = serviceCategories.map(cat => ({
             <!-- Image area -->
             <div class="relative h-44 overflow-hidden">
               <img
-                src={`${cat.image}${cat.image.includes('?') ? '&' : '?'}w=400&h=250&fit=crop&fm=webp`}
-                srcset={`${cat.image}${cat.image.includes('?') ? '&' : '?'}w=320&h=200&fit=crop&fm=webp 320w, ${cat.image}${cat.image.includes('?') ? '&' : '?'}w=400&h=250&fit=crop&fm=webp 400w, ${cat.image}${cat.image.includes('?') ? '&' : '?'}w=600&h=375&fit=crop&fm=webp 600w`}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                src={cat.image}
                 alt={`${cat.name} - services de vitrerie Paris`}
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                width="400"
-                height="250"
+                width="800"
+                height="500"
                 loading="lazy"
+                decoding="async"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#1A2B4A]/70 via-[#1A2B4A]/30 to-transparent"></div>
               <div class="absolute bottom-3 left-3 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20">
