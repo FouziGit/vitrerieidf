@@ -58,7 +58,7 @@ const serviceSchemas = category.services.map(service => ({
 ---
 
 <Layout
-  title={`${category.name} | Vitriers Paris - ${contactInfo.companyName}`}
+  title={category.seoTitle ?? `${category.name} | Vitriers Paris - ${contactInfo.companyName}`}
   description={category.metaDescription}
   canonical={`/services/${category.slug}/`}
   jsonLd={[breadcrumbSchema, ...serviceSchemas]}

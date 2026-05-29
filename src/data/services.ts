@@ -12,6 +12,7 @@ export interface ServiceCategory {
   slug: string;
   description: string;
   metaDescription: string;
+  seoTitle?: string;
   image: string;
   iconPath: string;
   services: Service[];
@@ -153,8 +154,9 @@ export const serviceCategories: ServiceCategory[] = [
   {
     name: "Dépannage & urgence vitrage",
     slug: "depannage-urgence-vitrage",
-    description: "Service d'urgence vitrier 24h/24, 7j/7. Intervention rapide en moins d'une heure sur Paris. Bris de glace, sécurisation, remplacement express.",
-    metaDescription: "Vitrier urgence 24h/24 à Paris et Île-de-France. Intervention en moins d'1h : bris de glace, sécurisation, remplacement express. Agréé assurances.",
+    description: "Service d'urgence vitrier 24h/24, 7j/7. Remplacement vitrine d'urgence à Paris en moins d'une heure : bris de glace, sécurisation, remplacement express de vitrage commercial et résidentiel.",
+    metaDescription: "Remplacement vitrine d'urgence à Paris en moins d'1h. Vitrier 24h/24, 7j/7 : bris de glace, sécurisation, remplacement express. Agréé assurances, devis gratuit.",
+    seoTitle: "Remplacement vitrine d'urgence Paris 24h/24 — Vitrier urgent",
     image: "/images/services/photo-1504307651254-35680f356dfd.webp",
     iconPath: "M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z",
     services: [
