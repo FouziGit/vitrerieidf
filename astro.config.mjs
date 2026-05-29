@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://vitriersparis.fr',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   adapter: netlify(),
   integrations: [react()],
   vite: {

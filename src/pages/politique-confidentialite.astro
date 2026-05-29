@@ -8,7 +8,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteUrl },
-    { "@type": "ListItem", "position": 2, "name": "Politique de confidentialité", "item": `${siteUrl}/politique-confidentialite` }
+    { "@type": "ListItem", "position": 2, "name": "Politique de confidentialité", "item": `${siteUrl}/politique-confidentialite/` }
   ]
 };
 ---
@@ -16,7 +16,7 @@ const breadcrumbSchema = {
 <Layout
   title="Politique de confidentialité | Vitriers Paris - Artisan Francilien IDF"
   description="Politique de confidentialité du site Artisan Francilien IDF, vitrier à Paris et Île-de-France. Protection des données personnelles, RGPD."
-  canonical="/politique-confidentialite"
+  canonical="/politique-confidentialite/"
   jsonLd={breadcrumbSchema}
 >
   <section class="section-padding bg-white">

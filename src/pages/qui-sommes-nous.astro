@@ -10,7 +10,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteUrl },
-    { "@type": "ListItem", "position": 2, "name": "Qui sommes-nous", "item": `${siteUrl}/qui-sommes-nous` }
+    { "@type": "ListItem", "position": 2, "name": "Qui sommes-nous", "item": `${siteUrl}/qui-sommes-nous/` }
   ]
 };
 ---
@@ -18,7 +18,7 @@ const breadcrumbSchema = {
 <Layout
   title="Qui sommes-nous | Vitriers Paris & IDF - Artisan Francilien IDF"
   description="Artisan Francilien IDF : entreprise de vitrerie fondée en 2009, basée à Paris. 15+ ans d'expérience, 5 000+ interventions, 8 départements couverts. Garantie décennale."
-  canonical="/qui-sommes-nous"
+  canonical="/qui-sommes-nous/"
   jsonLd={breadcrumbSchema}
 >
   <!-- Hero -->

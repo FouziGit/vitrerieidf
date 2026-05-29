@@ -23,7 +23,7 @@ import { serviceCategories } from '../data/services';
         <h3 class="text-white font-semibold mb-4">Nos services</h3>
         <ul class="space-y-2.5">
           {serviceCategories.map((cat) => (
-            <li><a href={`/services/${cat.slug}`} class="text-sm hover:text-accent-400 transition-colors">{cat.name}</a></li>
+            <li><a href={`/services/${cat.slug}/`} class="text-sm hover:text-accent-400 transition-colors">{cat.name}</a></li>
           ))}
         </ul>
       </div>
@@ -32,10 +32,10 @@ import { serviceCategories } from '../data/services';
         <h3 class="text-white font-semibold mb-4">Navigation</h3>
         <ul class="space-y-2.5">
           <li><a href="/" class="text-sm hover:text-accent-400 transition-colors">Accueil</a></li>
-          <li><a href="/services" class="text-sm hover:text-accent-400 transition-colors">Catalogue de services</a></li>
-          <li><a href="/zones-intervention" class="text-sm hover:text-accent-400 transition-colors">Zones d'intervention</a></li>
-          <li><a href="/entreprises" class="text-sm hover:text-accent-400 transition-colors">Entreprises & professionnels</a></li>
-          <li><a href="/qui-sommes-nous" class="text-sm hover:text-accent-400 transition-colors">Qui sommes-nous</a></li>
+          <li><a href="/services/" class="text-sm hover:text-accent-400 transition-colors">Catalogue de services</a></li>
+          <li><a href="/zones-intervention/" class="text-sm hover:text-accent-400 transition-colors">Zones d'intervention</a></li>
+          <li><a href="/entreprises/" class="text-sm hover:text-accent-400 transition-colors">Entreprises & professionnels</a></li>
+          <li><a href="/qui-sommes-nous/" class="text-sm hover:text-accent-400 transition-colors">Qui sommes-nous</a></li>
         </ul>
       </div>
 
@@ -54,8 +54,8 @@ import { serviceCategories } from '../data/services';
     <div class="container-custom px-4 md:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-300">
       <p>&copy; {new Date().getFullYear()} {contactInfo.companyName}. Tous droits réservés.</p>
       <div class="flex items-center gap-4">
-        <a href="/mentions-legales" class="hover:text-white transition-colors">Mentions légales</a>
-        <a href="/politique-confidentialite" class="hover:text-white transition-colors">Confidentialité</a>
+        <a href="/mentions-legales/" class="hover:text-white transition-colors">Mentions légales</a>
+        <a href="/politique-confidentialite/" class="hover:text-white transition-colors">Confidentialité</a>
         <span>Site créé par <a href="https://nouhbenzidane.fr" target="_blank" rel="noopener noreferrer" class="font-medium text-accent-400 hover:text-white transition-colors">Nouh Benzidane</a></span>
       </div>
     </div>

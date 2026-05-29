@@ -12,7 +12,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Accueil", "item": siteUrl },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteUrl}/services` }
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteUrl}/services/` }
   ]
 };
 ---
@@ -20,7 +20,7 @@ const breadcrumbSchema = {
 <Layout
   title="Services de vitrerie Paris & IDF | Vitriers Paris - Artisan Francilien IDF"
   description="Tous nos services de vitrerie en Île-de-France : double vitrage, miroiterie sur mesure, dépannage urgence 24h/24. 9 prestations, tarifs transparents, devis gratuit."
-  canonical="/services"
+  canonical="/services/"
   jsonLd={breadcrumbSchema}
 >
   <!-- Hero -->
@@ -61,7 +61,7 @@ const breadcrumbSchema = {
       <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {serviceCategories.map((category, index) => (
           <a
-            href={`/services/${category.slug}`}
+            href={`/services/${category.slug}/`}
             class:list={[
               'animate-on-scroll hover-lift group block rounded-2xl overflow-hidden border border-[#DFE6EE] bg-white shadow-sm transition-all duration-300',
               `delay-${(index + 1) * 100}`
